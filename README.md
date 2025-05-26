@@ -4,6 +4,15 @@
 Este proyecto realiza un análisis básico de facturación a partir de archivos CSV que contienen ventas realizadas por cuatro tiendas. Cada archivo representa una tienda distinta y contiene columnas comunes como `Producto`, `Precio`, `Costo de envío`, entre otras.
 
 ## 📁 Estructura de los Datos
+```bash
+.
+├── colors/
+│   ├── ...
+│   └── Paleta de colores  # Imagenes png de la paleta de colores.
+├── Tiendas_DC_Alura.ipynb
+├── Tiendas_DC_Alura.py
+└── README.md
+```
 
 Cada archivo CSV tiene las siguientes columnas:
 
@@ -33,10 +42,19 @@ Facturación = Precio + Costo de envío
 5. Genera un gráfico de barras que compara las tiendas:
 - El color rojo indica la tienda con mayor facturación.
 - Cada barra tiene el valor total encima.
-
+## 🎨 Personalización
+Puedes cambiar los colores directamente en el script con tus variables personalizadas, por ejemplo:
+```bash
+Blanco_1 = "#ffffff"
+Turquesa_1 = "#40e0d0"
+Verde_1 = "#2e8b57"
+Negro_Carbón = "#333333"
+```
 ## 📊 Resultado
 
 El gráfico final permite identificar visualmente qué tienda generó más ingresos totales.
+![Ciecia de Datos Linkedin (1)](https://github.com/user-attachments/assets/4b16ec10-f032-41b4-b61e-de7d691d9496)
+
 
 ## 🧪 Requisitos
 
@@ -47,3 +65,4 @@ El gráfico final permite identificar visualmente qué tienda generó más ingre
 Instalación recomendada:
 ```bash
 pip install pandas matplotlib
+```
