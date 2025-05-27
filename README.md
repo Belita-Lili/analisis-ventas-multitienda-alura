@@ -1,5 +1,6 @@
 # analisis-ventas-multitienda-alura
-![image](https://github.com/user-attachments/assets/1c94bcb2-4bfc-49ea-a360-6a5c33dcd662)
+![image](https://github.com/user-attachments/assets/a8b53e77-ab35-4ace-8ad3-6507808e77ee)
+
 
 # Análisis de Facturación por Tienda
 
