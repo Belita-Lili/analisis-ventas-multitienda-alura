@@ -1,4 +1,6 @@
 # analisis-ventas-multitienda-alura
+![Uploading image.png…]()
+
 # Análisis de Facturación por Tienda
 
 Este proyecto realiza un análisis básico de facturación a partir de archivos CSV que contienen ventas realizadas por cuatro tiendas. Cada archivo representa una tienda distinta y contiene columnas comunes como `Producto`, `Precio`, `Costo de envío`, entre otras.
