@@ -10,13 +10,14 @@ Este proyecto realiza un análisis básico de facturación a partir de archivos 
 ```bash
 .
 ├── dashboard-tienda-alura/
-│   └── analisis/ # Imagenes png de la paleta de colores.
+│   └── analisis/                   #ETL de la base de datos en google colab 
 │       ├── tiendas_dc_alura.py
 │       └── Tiendas_DC_Alura.ipynb
-│   └── colores/
+│   └── colores/                    #Paleta de colores en png
 │       └──paleta de colores...
-│   └──graficas/
+│   └──graficas/                    #Graficas generadas con python
 │       └──graficas...
+│   └──pagina-tienda-alura.html     #Pagina web del dashboard
 └── README.md
 ```
 
