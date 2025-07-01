@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda Alura - Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #f2f2f2;
+      color: #0a0c0d;
+      font-family: Arial, sans-serif;
+      /* quitamos display:flex y height:100vh para permitir scroll normal */
+    }
+
+    /* Encabezado */
+    header {
+      background-color: #348e91;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 15px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Panel superior con 4 tarjetas */
+    .dashboard {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      background-color: #213635;
+      color: #f2f2f2;
+      flex-wrap: wrap;
+    }
+    .card {
+      background-color: #348e91;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      flex: 1 1 20%;
+      margin: 5px;
+      font-size: 16px;
+    }
+
+    /* Galería de gráficas */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 300px; /* altura estándar para evitar desbordes */
+      gap: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+      /* eliminamos overflow:hidden */
+    }
+    .gallery img,
+    .gallery iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      border: 3px solid #348e91;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Modal para la descripción */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(10,12,13,0.8);
+    }
+    .modal-content {
+      background-color: #f2f2f2;
+      margin: 10% auto;
+      padding: 20px;
+      border: 3px solid #348e91;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 8px;
+    }
+    .close {
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: #286f72;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #213635;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    Tienda Alura
+  </header>
+
+  <!-- Cuadros resumen -->
+  <div class="dashboard">
+    <div class="card">Tienda A<br><strong>Mayores ingresos:$1,212,258,300</strong></div>
+    <div class="card">Producto mas vendidos<br><strong>Electronicos con 37.71% en ventas</strong></div>
+    <div class="card">Tienda C<br><strong>Mejor calificacion: 4.05</strong></div>
+    <div class="card">Tienda D<br><strong>Ingresos en decrecientes y mala calificación</strong></div>
+  </div>
+
+  <!-- Galería de gráficas -->
+  <div class="gallery">
+    <img src="graficas/grafica1.png" alt="Gráfica 1" onclick="openModal('Gráfico de barras que muestra el ingreso anual total de cada tienda (A, B, C, D). La barra de la tienda A está destacada con un porcentaje que indica qué parte representa de todo el ingreso. Sirve para priorizar estrategias de negocio en las tiendas de mayor facturación.')">
+    <img src="graficas/grafica2.png" alt="Gráfica 2" onclick="openModal('Gráfico de barras horizontales que muestra las ventas por tipo de producto (libros, juguetes, electrónicos, etc.). Destaca en negritas que la categoría de electrónicos representa el 37.71% de las ventas, casi el doble de otras categorías. Es clave para priorizar el surtido o promociones sobre el portafolio de productos.')">
+    <iframe src="graficas/grafica2.html"></iframe>
+    <img src="graficas/grafica3.png" alt="Gráfica 4" onclick="openModal('Aquí se presenta la distribución de calificaciones otorgadas por los clientes a cada tienda, desde 1 hasta 5 estrellas. Es un indicador clave para evaluar la satisfacción del cliente y priorizar mejoras.')">
+    <img src="graficas/grafica4.png" alt="Gráfica 5" onclick="openModal('Gráfico de barras horizontales que muestra el promedio del costo de envío en diferentes ciudades o municipios. Permite ver dónde se encarecen los envíos y dónde podrían optimizarse los costos logísticos. Por ejemplo, Soacha aparece con el mayor costo promedio de envío.')">
+    <img src="graficas/grafica5.png" alt="Gráfica 6" onclick="openModal('Este mapa ilustra la ubicación geográfica de las tiendas o puntos de venta de la cadena. Ayuda a visualizar la cobertura territorial y a planificar estrategias de expansión.')">
+  </div>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Datos obtenidos del curso de Ciencia de datos por parte de Alura Latam. Desarrollo por Liliana Becerril.
+  </footer>
+
+  <script>
+    function openModal(text) {
+      document.getElementById("modalText").textContent = text;
+      document.getElementById("myModal").style.display = "block";
+    }
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
