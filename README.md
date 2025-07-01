@@ -9,11 +9,14 @@ Este proyecto realiza un análisis básico de facturación a partir de archivos 
 ## 📁 Estructura de los Datos
 ```bash
 .
-├── colors/
-│   ├── ...
-│   └── Paleta de colores  # Imagenes png de la paleta de colores.
-├── Tiendas_DC_Alura.ipynb
-├── Tiendas_DC_Alura.py
+├── dashboard-tienda-alura/
+│   └── analisis/ # Imagenes png de la paleta de colores.
+│       ├── tiendas_dc_alura.py
+│       └── Tiendas_DC_Alura.ipynb
+│   └── colores/
+│       └──paleta de colores...
+│   └──graficas/
+│       └──graficas...
 └── README.md
 ```
 
